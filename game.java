@@ -11,7 +11,20 @@ class game{
         int num=random.nextInt(101); 
         if(num==guess)
         {
+            System.out.println("Your guess is right.");
             game.score++;
+        }
+        else if(num>guess)
+        {
+            System.out.println("Your guess is a low.");
+        }
+        else if(num<guess)
+        {
+            System.out.println("Your guess is a High.");
+        }
+        else if(num!=guess)
+        {
+            System.out.println("Your guess is a low.");
         }
     }
     public static void main(String args[]){
@@ -22,6 +35,7 @@ class game{
             System.out.println("1 to Start Game");
             System.out.println("2 to Show Score");
             System.out.println("3 to Exit");
+            System.out.print("Enter your choice : ");
             ch=sc.nextInt();
             switch(ch)
             {
